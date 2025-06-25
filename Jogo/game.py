@@ -779,7 +779,7 @@ def update(dt):
         hero.victory_animation.update(dt)
         if next_stage_timer <= 0:
             start_stage()
-from pgzero.screen import Screen
+
 def draw():
     screen.clear() # type: ignore
     
