@@ -1,6 +1,6 @@
 # O Labirinto Místico - Jogo Roguelike
 
-![screenshot do jogo](images/screenshot.png)
+![screenshot do jogo](images/screenshot.PNG)
 
 ## Descrição
 
