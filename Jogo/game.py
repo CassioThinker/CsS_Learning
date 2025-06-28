@@ -868,13 +868,13 @@ def draw_game():
     for bomb in bombs:
         bomb.draw(screen) # type: ignore
     
-    # --- HUD refinada (agora no canto superior direito) ---
+    # --- HUD refinado ---
     hud_width = 220
     hud_height = 80
     hud_x = WIDTH - hud_width - 16
     hud_y = 16
 
-    # Painel de fundo (sem transparência, mas com cor escura)
+    # Painel de fundo
     hud_rect = pygame.Rect(hud_x, hud_y, hud_width, hud_height)
     screen.draw.filled_rect(hud_rect, (30, 30, 30))  # Fundo escuro # type: ignore
     screen.draw.rect(hud_rect, WHITE)  # Borda branca   # type: ignore
@@ -904,7 +904,7 @@ def draw_game():
     # Dica de tecla
     screen.draw.text("ESC: Menu", (hud_x + 120, hud_y + 68), fontsize=14, color=(180, 180, 180))    # type: ignore
 
-    # --- Mensagem de feedback (agora centralizada no topo, acima das paredes) ---
+    # --- Mensagem de feedback ---
     if feedback_message:
         box_width = 420
         box_height = 40
