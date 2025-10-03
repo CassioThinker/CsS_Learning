@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-flask-api-deployment
+  labels:
+    app: python-flask-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: python-flask-api
+  template:
+    metadata:
+      labels:
+        app: python-flask-api
+    spec:
+      containers:
+      - name: python-flask-api
+        image: YOUR_ECR_IMAGE_URI # Substitua pela URI da sua imagem no ECR
+        ports:
+        - containerPort: 5000
+
